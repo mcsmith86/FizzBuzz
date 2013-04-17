@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FizzBuzz</title>
+		<script type='text/javascript' src='fizzbuzz.js'></script>
+
+		<script>
+			rate = 3; // numbers per second
+
+			fizzFxn = function() {
+				var el = document.getElementById('fizz');
+				el.style.opacity = 1;
+
+				setTimeout(function() {
+					el = document.getElementById('fizz');
+					el.style.opacity = 0;
+				}, rate * 500)
+			};
+
+			buzzFxn = function() {
+				var el = document.getElementById('buzz');
+				el.style.opacity = 1;
+
+				setTimeout(function() {
+					el = document.getElementById('buzz');
+					el.style.opacity = 0;
+				}, rate * 500)
+			};
+			
+			countFxn = function(count) {
+				var el = document.getElementById('count');
+				el.innerHTML = count;
+			};
+
+			FizzBuzz.setOptions({
+				fizzFactor : 3,
+				buzzFactor : 5,
+				runMax : 100,
+				fizzCallback : fizzFxn,
+				buzzCallback : buzzFxn,
+				countCallback: countFxn,
+				rate : rate
+			});
+
+		</script>
+
+		<style type='text/css'>
+			body, html {
+				height: 100%;
+				width: 100%
+			}
+			#container {
+				height: 100%;
+			}
+			#fizz {
+				width: 50%;
+				background-color: red;
+				height: 30%;
+				width: 30%;
+				float: left;
+				text-align: center;
+				opacity: 0;
+			}
+
+			#buzz {
+				width: 50%;
+				background-color: red;
+				height: 30%;
+				width: 30%;
+				float: left;
+				text-align: center;
+				opacity: 0;
+			}
+
+			#count {
+				height: 30%;
+				width: 30%;
+				float: left;
+				text-align: center;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<div id='container'>
+			<div id='fizz'>
+				Fizz
+			</div>
+
+			<div id='count'>
+				0
+			</div>
+
+			<div id='buzz'>
+				Buzz
+			</div>
+		</div>
+	</body>
+</html>
