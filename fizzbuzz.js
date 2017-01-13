@@ -1,56 +1,56 @@
 var FizzBuzz = (function() {
 
-	var pub = {};
+	var public = {};
 	var fizzFactor, buzzFactor,
 		fizzCallback, buzzCallback, counterCallback,
 		countSpeed, runMax, counter = 0, intervalId;
 
-	pub.setFizz = function(iFizzFactor) {
+	public.setFizz = function(iFizzFactor) {
 		fizzFactor = iFizzFactor;
 	};
-	pub.getFizz = function(iFizzFactor) {
+	public.getFizz = function(iFizzFactor) {
 		return fizzFactor;
 	};
 
-	pub.setBuzz = function(iBuzzFactor) {
+	public.setBuzz = function(iBuzzFactor) {
 		buzzFactor = iBuzzFactor;
 	};
-	pub.getBuzz = function(iBuzzFactor) {
+	public.getBuzz = function(iBuzzFactor) {
 		return buzzFactor;
 	};
 
-	pub.setFizzCallback = function(fFizzCallback) {
+	public.setFizzCallback = function(fFizzCallback) {
 		fizzCallback = fFizzCallback;
 	};
-	pub.getFizzCallback = function(fFizzCallback) {
+	public.getFizzCallback = function(fFizzCallback) {
 		return fizzCallback;
 	};
 
-	pub.setBuzzCallback = function(fBuzzCallback) {
+	public.setBuzzCallback = function(fBuzzCallback) {
 		buzzCallback = fBuzzCallback;
 	};
-	pub.getBuzzCallback = function(fBuzzCallback) {
+	public.getBuzzCallback = function(fBuzzCallback) {
 		return buzzCallback;
 	};
 
-	pub.setCounterCallback = function(fCounterCallback) {
+	public.setCounterCallback = function(fCounterCallback) {
 		counterCallback = fCounterCallback;
 	};
-	pub.getCounterCallback = function(fCounterCallback) {
+	public.getCounterCallback = function(fCounterCallback) {
 		return counterCallback;
 	};
 
-	pub.setRate = function(icountSpeed) {
+	public.setRate = function(icountSpeed) {
 		countSpeed = icountSpeed;
 	};
-	pub.getRate = function(icountSpeed) {
+	public.getRate = function(icountSpeed) {
 		return countSpeed;
 	};
 
-	pub.setRunMax = function(iRunMax) {
+	public.setRunMax = function(iRunMax) {
 		runMax = iRunMax;
 	};
-	pub.getRunMax = function(iRunMax) {
+	public.getRunMax = function(iRunMax) {
 		return countRunMax;
 	};
 
@@ -64,7 +64,7 @@ var FizzBuzz = (function() {
 	 *  rate
 	 *  runMax
 	 */
-	pub.setOptions = function() {
+	public.setOptions = function() {
 
 		args = arguments[0];
 		fizzFactor = args['fizzFactor'];
@@ -77,7 +77,7 @@ var FizzBuzz = (function() {
 
 	};
 
-	pub.run = function() {
+	public.run = function() {
 
 		intervalId = setInterval(increment, 1000 / countSpeed);
 
@@ -109,5 +109,5 @@ var FizzBuzz = (function() {
 		counter++;
 	};
 
-	return pub;
+	return public;
 })();
